@@ -12,7 +12,19 @@ func main() {
 	hand, remainingDeck := deal(cards, 5)
 
 	hand.print()
-	remainingDeck.print()
+	// remainingDeck.print()
+
+	err := remainingDeck.saveToFile("remainingDeck")
+
+	if err != nil {
+		println(err)
+	}
+
+	readingFromFile := newDeckFromFile("file.txt")
+
+	readingFromFile.shuffle()
+	
+	readingFromFile.print()
 }
 
 // func newCard() string {
