@@ -20,7 +20,7 @@ func main() {
 		println(err)
 	}
 
-	readingFromFile := newDeckFromFile("file.txt")
+	readingFromFile := newDeckFromFile("remainingDeck")
 
 	readingFromFile.shuffle()
 	
